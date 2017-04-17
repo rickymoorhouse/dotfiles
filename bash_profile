@@ -1,8 +1,12 @@
 # ~/.bash_profile: executed by bash(1) for login shells.
 
+# Source common non-bash specific items
+if [ -f ~/dotfiles/profile ]; then
+  source ~/dotfiles/profile
+fi
 # Source common items that I want for both login and non-login shells
-if [ -f ~/dotfiles/bash_common ]; then
-  source ~/dotfiles/bash_common
+if [ -f ~/dotfiles/bashrc ]; then
+  source ~/dotfiles/bashrc
 fi
 
 # Set up keychain

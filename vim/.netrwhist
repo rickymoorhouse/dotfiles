@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/rickymoorhouse/Documents/ansible/config'
+let g:netrw_dirhist_2='/Users/rickymoorhouse/Blog/blog.rickymoorhouse.co.uk/_site'
+let g:netrw_dirhist_3='/Users/rickymoorhouse/Blog/blog.rickymoorhouse.co.uk/_site/2010'
+let g:netrw_dirhist_4='/Users/rickymoorhouse/Blog/blog.rickymoorhouse.co.uk/_site/2010/101010-1010'
+let g:netrw_dirhist_5='/Users/rickymoorhouse/Blog/blog.rickymoorhouse.co.uk/_site/2016/hatching-chicks-at-school'
+let g:netrw_dirhist_6='/Users/rickymoorhouse/Blog/blog.rickymoorhouse.co.uk/dawlish'
