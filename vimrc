@@ -14,6 +14,49 @@ if (empty($TMUX))
   endif
 endif
 
-set tabstop=4 
+" Syntax and colouring
+if has("syntax")
+    " Enable syntax highlighting
+    syntax enable
+    " Set 256 color terminal support
+    set t_Co=256
+    " Set dark background
+    set background=dark
+    " Set colorscheme
+    silent! colorscheme nova
+endif
+
+" Always show where I am // src: https://github.com/necolas/dotfiles/blob/master/vim/vimrc
+if has("cmdline_info")
+    " Show the cursor line and column number
+    set ruler
+    " Show partial commands in status line
+    set showcmd
+    " Show whether in insert or replace mode
+    set showmode
+endif
+
+
+" Tab settings (may be overriden by editor-config)
+set tabstop=3 
 set expandtab
-syntax enable
+
+
+" Search settings // src: https://github.com/necolas/dotfiles/blob/master/vim/vimrc
+if has("extra_search")
+    " Highlight searches [use :noh to clear]
+    set hlsearch
+    " Highlight dynamically as pattern is typed
+    set incsearch
+    " Ignore case of searches...
+    set ignorecase
+    " ...unless has mixed case
+    set smartcase
+endif
+
+
+
+" Load local machine settings if they exist // src: https://github.com/necolas/dotfiles/blob/master/vim/vimrc
+if filereadable(glob("$HOME/.vimrc.local"))
+    source $HOME/.vimrc.local
+endif

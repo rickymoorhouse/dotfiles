@@ -4,7 +4,7 @@ then
   mkdir backups
 fi
 
-for DOTFILE in bashrc bash_profile profile vim vimrc
+for DOTFILE in bashrc bash_aliases bash_profile profile vim vimrc
 do
   if [ -L ~/.$DOTFILE ]; 
   then

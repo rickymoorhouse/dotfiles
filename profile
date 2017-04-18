@@ -1,2 +1,2 @@
-export PYTHONSTARTUP=$HOME/.pythonrc.py
+export PYTHONSTARTUP=$HOME/dotfiles/pythonrc.py
 
