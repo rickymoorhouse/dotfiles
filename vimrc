@@ -54,7 +54,12 @@ if has("extra_search")
     set smartcase
 endif
 
-
+" Undo files 
+if has('persistent_undo')
+   set undodir=$HOME/.vim/undo
+   :silent call system('mkdir -p ' . &undodir)   
+   set undofile
+endif
 
 " Load local machine settings if they exist // src: https://github.com/necolas/dotfiles/blob/master/vim/vimrc
 if filereadable(glob("$HOME/.vimrc.local"))
