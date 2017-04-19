@@ -65,8 +65,8 @@ OS_TYPE=`uname -s`
 case $OS_TYPE in 
 
   Darwin*)
-        CLICOLORS=1
-        alias ls='ls -G'
+        export CLICOLOR=1
+        export LSCOLORS=ExgxcxdxCxDaDahbabacec
         # OSX: Enable bash_completion (Install by: brew install bash-completion)
         #       Homebrew's own bash completion script: /usr/local/etc/bash_completion.d
         if [ -f $(brew --prefix)/etc/bash_completion ]; then
