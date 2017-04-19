@@ -4,6 +4,11 @@ then
   mkdir backups
 fi
 
+if [ ! -e ~/.gitconfig ];
+then
+  cp ~/dotfiles/gitconfig ~/.gitconfig
+fi
+ 
 for DOTFILE in bashrc bash_aliases bash_profile profile vim vimrc
 do
   if [ -L ~/.$DOTFILE ]; 
