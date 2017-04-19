@@ -23,12 +23,12 @@ prompt_git() {
 
          # Check for uncommitted changes in the index.
          if ! $(git diff --quiet --ignore-submodules --cached); then
-            s+='+';
+            s+='↑';
          fi;
 
          # Check for unstaged changes.
          if ! $(git diff-files --quiet --ignore-submodules --); then
-            s+='!';
+            s+='+';
          fi;
 
          # Check for untracked files.
@@ -50,7 +50,7 @@ prompt_git() {
          git rev-parse --short HEAD 2> /dev/null || \
          echo '(unknown)')";
 
-      [ -n "${s}" ] && s=" [${s}]";
+      [ -n "${s}" ] && s=" ${s}";
 
       echo -e "${1}${branchName}${2}${s}";
    else
