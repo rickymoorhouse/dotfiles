@@ -124,7 +124,7 @@ if [ -f /usr/local/share/gitprompt.sh ]; then
   GIT_PROMPT_ONLY_IN_REPO=1
   GIT_PROMPT_THEME=Single_line_Solarized
   GIT_PROMPT_SHOW_UNTRACKED_FILES=no
-  #. /usr/local/share/gitprompt.sh
+  . /usr/local/share/gitprompt.sh
 fi;
 export EDITOR=vim
 export GOPATH=~/.go
