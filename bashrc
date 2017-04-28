@@ -62,7 +62,7 @@ unset color_prompt force_color_prompt
 # Look up OS type so we can branch
 OS_TYPE=`uname -s`
 
-case $OS_TYPE in 
+case $OS_TYPE in
 
   Darwin*)
         export CLICOLOR=1
@@ -72,6 +72,7 @@ case $OS_TYPE in
         if [ -f $(brew --prefix)/etc/bash_completion ]; then
             . $(brew --prefix)/etc/bash_completion
         fi
+        export PYTHONPATH=$(brew --prefix)/lib/python2.7/site-packages
     ;;
 
     Linux*)
@@ -116,15 +117,15 @@ if [ -d ~/bin ]; then
     export PATH=$PATH:~/bin
 fi
 
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
+if [ -f ~/dotfiles/git-completion.bash ]; then
+  . ~/dotfiles/git-completion.bash
 fi
 
-if [ -f /usr/local/share/gitprompt.sh ]; then 
+if [ -f ~/dotfiles/gitprompt.sh ]; then
   GIT_PROMPT_ONLY_IN_REPO=1
   GIT_PROMPT_THEME=Single_line_Solarized
   GIT_PROMPT_SHOW_UNTRACKED_FILES=no
-  . /usr/local/share/gitprompt.sh
+  . ~/dotfiles/gitprompt.sh
 fi;
 export EDITOR=vim
 export GOPATH=~/.go
