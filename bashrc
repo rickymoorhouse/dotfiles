@@ -65,6 +65,7 @@ OS_TYPE=`uname -s`
 case $OS_TYPE in
 
   Darwin*)
+        export HOMEBREW_NO_ANALYTICS=1
         export CLICOLOR=1
         export LSCOLORS=ExgxcxdxCxDaDahbabacec
         # OSX: Enable bash_completion (Install by: brew install bash-completion)
