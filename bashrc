@@ -121,6 +121,9 @@ fi
 if [ -f ~/dotfiles/git-completion.bash ]; then
   . ~/dotfiles/git-completion.bash
 fi
+if [ -f ~/.bash_local ]; then
+  . ~/.bash_local
+fi
 
 if [ -f ~/dotfiles/gitprompt.sh ]; then
   GIT_PROMPT_ONLY_IN_REPO=1
