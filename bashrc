@@ -65,6 +65,7 @@ OS_TYPE=`uname -s`
 case $OS_TYPE in
 
   Darwin*)
+        export HOMEBREW_NO_ANALYTICS=1
         export CLICOLOR=1
         export LSCOLORS=ExgxcxdxCxDaDahbabacec
         # OSX: Enable bash_completion (Install by: brew install bash-completion)
@@ -119,6 +120,9 @@ fi
 
 if [ -f ~/dotfiles/git-completion.bash ]; then
   . ~/dotfiles/git-completion.bash
+fi
+if [ -f ~/.bash_local ]; then
+  . ~/.bash_local
 fi
 
 if [ -f ~/dotfiles/gitprompt.sh ]; then
