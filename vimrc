@@ -38,7 +38,7 @@ endif
 
 
 " Tab settings (may be overriden by editor-config)
-set tabstop=3 
+set tabstop=4 
 set expandtab
 
 
