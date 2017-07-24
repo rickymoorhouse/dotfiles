@@ -4,13 +4,27 @@
 	required = true
 [user]
 	name = Ricky Moorhouse
-	signingkey = 3C3C7380362611F2
-	email = ricky@samespirit.net
+    useconfigonly = true
+
+[commit]
+#  gpgsign = true
+  template = ~/dotfiles/gitmessage
 
 [alias]
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset' --abbrev-commit --date=relative
   st = status
   up = !git fetch origin && git rebase origin/master
+  recap = !git log --all --oneline --no-merges --author=${1-$(git config user.email)}
+  today = !git log --all --since=00:00:00 --oneline --no-merges --author=${1-$(git config user.email)}
+  changelog = !git log --oneline --no-merges ${1-$(git describe --abbrev=0)}..HEAD
+  upstream = !git log --oneline --no-merges HEAD..${1-$(git branch -lvv | perl -ne '/^\\*.*\\[(.*?)\\]/ and print "$1\n"')}
+  local = !git log --oneline --no-merges ${1-$(git branch -lvv | perl -ne '/^\\*.*\\[(.*?)\\]/ and print "$1\n"')}..HEAD
+  # Profiles
+  work = "!git config user.email \"moorh@uk.ibm.com\" && git config user.signingkey 7EAB3807"
+  home = "git config user.email \"ricky@samespirit.net\"" 
+
+[gpg]
+	program = gpg
 
 [push]
 	default = simple
