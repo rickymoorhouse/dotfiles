@@ -10,7 +10,7 @@ if [ -f ~/dotfiles/bashrc ]; then
 fi
 
 # Set up keychain
-eval `keychain --eval --agents ssh --inherit any id_ed25519 id_rsa`
+eval `~/dotfiles/keychain --eval --agents ssh --inherit any id_ed25519 id_rsa_2011-07-26`
 # iTerm integration
 test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
 if [ -x /usr/bin/byobu ]; then
