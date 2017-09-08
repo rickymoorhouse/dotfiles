@@ -21,10 +21,10 @@
   local = !git log --oneline --no-merges ${1-$(git branch -lvv | perl -ne '/^\\*.*\\[(.*?)\\]/ and print "$1\n"')}..HEAD
   # Profiles
   work = "!git config user.email \"moorh@uk.ibm.com\" && git config user.signingkey 7EAB3807"
-  home = "!git config user.email \"ricky@samespirit.net\"" 
+  home = "!git config user.email \"ricky@samespirit.net\" && git config user.signingkey 362611F2" 
 
 [gpg]
-	program = gpg
+	program = /usr/local/bin/gpg
 
 [push]
 	default = simple
@@ -83,4 +83,4 @@
   linenumber = normal
 [commit]
   gpgsign = true
-  template = ~/dotfiles/gitmessage
+  template = ~/.gitmessage
