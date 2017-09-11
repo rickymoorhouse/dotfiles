@@ -1999,6 +1999,10 @@
 	<false/>
 	<key>DimOnlyText</key>
 	<true/>
+	<key>HideTab</key>
+	<false/>
+	<key>HideTabNumber</key>
+	<false/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
@@ -2044,15 +2048,15 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>929 110 445 103 0 0 1440 878 </string>
 	<key>NSWindow Frame ProfilesPanel</key>
-	<string>-792 671 735 382 -1920 0 1920 1058 </string>
+	<string>900 641 735 382 0 0 1680 1028 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>171 94 606 456 0 0 1440 900 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>-1449 269 918 495 -1920 0 1920 1058 </string>
+	<string>725 582 918 512 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>335 70 1002 658 0 0 1440 878 </string>
+	<string>48 144 994 751 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>529 274 650 502 0 0 1440 878 </string>
+	<string>0 1200 3358 1868 0 1200 3360 1868 </string>
 	<key>NeverWarnAboutShortLivedSessions_1A2D60A2-8987-4368-9F3C-C2479DAF98F4</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_1A2D60A2-8987-4368-9F3C-C2479DAF98F4_selection</key>
@@ -3348,7 +3352,18 @@
 			<key>Transparency</key>
 			<real>0.059786427514792899</real>
 			<key>Triggers</key>
-			<array/>
+			<array>
+				<dict>
+					<key>action</key>
+					<string>ScriptTrigger</string>
+					<key>parameter</key>
+					<string>open \0</string>
+					<key>partial</key>
+					<true/>
+					<key>regex</key>
+					<string>vnc://[a-zA-Z0-9:]+@([0-9\.])+:([0-9]+)</string>
+				</dict>
+			</array>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>
@@ -3439,7 +3454,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-06-20T19:47:37Z</date>
+	<date>2017-09-08T11:00:29Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -3454,6 +3469,8 @@
 	<array>
 		<string>Notes</string>
 	</array>
+	<key>Use background pattern indicator</key>
+	<true/>
 	<key>WindowNumber</key>
 	<false/>
 	<key>WordCharacters</key>
