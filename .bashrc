@@ -118,18 +118,18 @@ if [ -d ~/bin ]; then
     export PATH=$PATH:~/bin
 fi
 
-if [ -f ~/dotfiles/git-completion.bash ]; then
-  . ~/dotfiles/git-completion.bash
+if [ -f ~/bin/git-completion.bash ]; then
+  . ~/bin/git-completion.bash
 fi
 if [ -f ~/.bash_local ]; then
   . ~/.bash_local
 fi
 
-if [ -f ~/dotfiles/gitprompt.sh ]; then
+if [ -f ~/bin/gitprompt.sh ]; then
   GIT_PROMPT_ONLY_IN_REPO=1
   GIT_PROMPT_THEME=Single_line_Solarized
   GIT_PROMPT_SHOW_UNTRACKED_FILES=no
-  . ~/dotfiles/gitprompt.sh
+  . ~/bin/gitprompt.sh
 fi;
 export EDITOR=vim
-export GOPATH=~/.go
+export GOPATH=~/go
