@@ -132,4 +132,3 @@ if [ -f ~/bin/gitprompt.sh ]; then
   . ~/bin/gitprompt.sh
 fi;
 export EDITOR=vim
-export GOPATH=~/.go

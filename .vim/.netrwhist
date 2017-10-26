@@ -1,2 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =0
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/rickymoorhouse/git/saas-keys/prodapic_eu'
+let g:netrw_dirhist_2='/Users/rickymoorhouse/git/apim/omniapps/bundles/api.war/src/com/ibm/apimgmt/config/impl'
+let g:netrw_dirhist_3='/Users/rickymoorhouse/git/apim/omniapps/bundles/api.war/src/com/ibm/apimgmt/config'
+let g:netrw_dirhist_4='/Users/rickymoorhouse/git/apim/omniapps/bundles/api.war/src/com/ibm/apimgmt/config/impl'
+let g:netrw_dirhist_5='/Users/rickymoorhouse/git/uptime/init'
+let g:netrw_dirhist_6='/Users/rickymoorhouse/git/uptime/packaging/etc/init.d'
+let g:netrw_dirhist_7='/Users/rickymoorhouse/.bash_sessions'
