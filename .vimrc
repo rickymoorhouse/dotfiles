@@ -23,7 +23,7 @@ if has("syntax")
     " Set dark background
     set background=dark
     " Set colorscheme
-    silent! colorscheme nova
+    silent! colorscheme nord
 endif
 
 " Always show where I am // src: https://github.com/necolas/dotfiles/blob/master/vim/vimrc
