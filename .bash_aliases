@@ -11,3 +11,4 @@ alias l='ls -CF'
 
 # dotfile repo
 alias cfg='/usr/bin/git --git-dir=$HOME/.rjm-cfg/ --work-tree=$HOME'
+alias code='code-insiders'
