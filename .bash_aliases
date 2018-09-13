@@ -9,6 +9,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+alias code='code-insiders'
+
 # dotfile repo
 alias cfg='/usr/bin/git --git-dir=$HOME/.rjm-cfg/ --work-tree=$HOME'
 alias code='code-insiders'
