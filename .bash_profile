@@ -14,5 +14,5 @@ eval `~/bin/keychain --eval --agents ssh,gpg --inherit any id_ed25519 id_rsa_201
 # iTerm integration
 test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
 if [ -x /usr/bin/byobu ]; then
-   _byobu_sourced=1 . /usr/bin/byobu-launch
+  _byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
 fi

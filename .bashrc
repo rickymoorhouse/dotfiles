@@ -54,6 +54,7 @@ fi
 
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='\[\e[38;5;202m\]$(byobu_prompt_status)\[\e[38;5;245m\]\u\[\e[00m\]@\[\e[38;5;172m\]\h\[\e[00m\]:\[\e[38;5;5m\]\w\[\e[00m\]⟫ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -133,3 +134,4 @@ if [ -f ~/bin/gitprompt.sh ]; then
 fi;
 export EDITOR=vim
 export GOPATH=~/.go
+[ -r /home/moorh/.byobu/prompt ] && . /home/moorh/.byobu/prompt   #byobu-prompt#

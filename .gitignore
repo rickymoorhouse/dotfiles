@@ -1,3 +1,4 @@
 .vim/undo
 .vim/.newrwhist
 backups
+.bash_local
