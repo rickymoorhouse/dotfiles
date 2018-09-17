@@ -1,4 +1,11 @@
 .vim/undo
 .vim/.newrwhist
 backups
+
+# Local files
 .bash_local
+.vimrc.local
+
+# Development environment
+node_modules
+virtual
