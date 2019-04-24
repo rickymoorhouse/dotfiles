@@ -126,12 +126,12 @@ if [ -f ~/.bash_local ]; then
   . ~/.bash_local
 fi
 
-if [ -f ~/bin/gitprompt.sh ]; then
-  GIT_PROMPT_ONLY_IN_REPO=1
-  GIT_PROMPT_THEME=Single_line_Solarized
-  GIT_PROMPT_SHOW_UNTRACKED_FILES=no
-  . ~/bin/gitprompt.sh
-fi;
+export KUBE_PS1_SEPARATOR=":"
+export KUBE_PS1_PREFIX="["
+export KUBE_PS1_SUFFIX="]"
+source ~/bin/kube-prompt.sh
+export GIT_PROMPT_START="\W ${Yellow}${PathShort}${ResetColor}\$(kube_ps1)"
+export PS1='\W $(kube_ps1) $(simple_git_prompt) \n\$ '
 export EDITOR=vim
 export GOPATH=~/.go
 [ -r /home/moorh/.byobu/prompt ] && . /home/moorh/.byobu/prompt   #byobu-prompt#

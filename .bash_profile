@@ -10,7 +10,9 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # Set up keychain
-eval `~/bin/keychain --eval --agents ssh,gpg --inherit any id_ed25519 id_rsa_2011-07-26 362611F2 7EAB3807`
+if [ -f ~/bin/keychain ]; then
+  eval `~/bin/keychain --eval --agents ssh,gpg --inherit any id_ed25519 id_rsa_2011-07-26 362611F2 7EAB3807`
+fi
 # iTerm integration
 test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
 if [ -x /usr/bin/byobu ]; then
