@@ -38,7 +38,7 @@ endif
 
 
 " Tab settings (may be overriden by editor-config)
-set tabstop=4 
+set tabstop=2 
 set expandtab
 
 
@@ -65,3 +65,9 @@ endif
 if filereadable(glob("$HOME/.vimrc.local"))
     source $HOME/.vimrc.local
 endif
+function ShowGitDiff()
+    new +set\ filetype=diff | silent read !git diff --cached
+endfunction
+
+autocmd FileType gitcommit exec ShowGitDiff()
+autocmd FileType gitcommit cnoreabbrev q quitall

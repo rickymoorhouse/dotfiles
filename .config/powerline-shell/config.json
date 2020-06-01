@@ -1,0 +1,14 @@
+{
+  "segments": [
+    "virtual_env",
+    "username",
+    "hostname",
+    "~/bin/context.py",
+    "ssh",
+    "cwd",
+    "git",
+    "hg",
+    "jobs",
+    "root"
+  ]
+}

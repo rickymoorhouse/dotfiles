@@ -1,6 +1,7 @@
 .vim/undo
 .vim/.newrwhist
 backups
+.bash_history
 
 # Local files
 .bash_local
@@ -9,3 +10,12 @@ backups
 # Development environment
 node_modules
 virtual
+__pycache__
+# Common folders
+Desktop
+Documents
+Downloads
+Music
+Movies
+Pictures
+Public
